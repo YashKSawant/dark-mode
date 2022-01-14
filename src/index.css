@@ -1,13 +1,123 @@
-body {
+/*
+=============== 
+Global Styles
+===============
+*/
+
+.dark-theme {
+  --clr-bcg: #282c35;
+  --clr-font: #fff;
+  --clr-primary: #ff82ac;
+}
+.light-theme {
+  --clr-bcg: #fff;
+  --clr-font: #282c35;
+  --clr-primary: #d23669;
+}
+*,
+::after,
+::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--clr-bcg);
+  color: var(--clr-font);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  transition: all 0.4s ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*
+=============== 
+Navbar
+===============
+*/
+.nav-center {
+  width: 90vw;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+.nav-center h1 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.inspired {
+  width: 80vw;
+  padding-top: 1rem;
+  font-style: italic;
+  font-size: 1.3rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.inspired a {
+  text-decoration: underline;
+  color: var(--clr-primary);
+}
+.label {
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 50px;
+  height: 25px;
+  padding: 5px;
+  width: 50px;
+  border-color: transparent;
+  cursor: pointer;
+}
+.icon-sun {
+  color: #f1c40f;
+}
+.icon-moon {
+  color: #fd9e06;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+.ball {
+  background-color: #fff;
+  border-radius: 50%;
+  border-color: transparent;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 21px;
+  width: 21px;
+  transition: all 0.4s ease-in-out;
+}
+
+.articles {
+  padding: 4rem 0;
+  width: 90vw;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.post {
+  margin-bottom: 3rem;
+}
+.post h2 {
+  color: var(--clr-primary);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 1.75rem;
+}
+.post-info {
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+.post-info span {
+  margin-right: 0.5rem;
 }

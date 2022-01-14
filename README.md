@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Dark Mode React App
+
+## This Project is live hosted [here]().
+
+This Project is inspired by [Overeacted](https://overreacted.io/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
